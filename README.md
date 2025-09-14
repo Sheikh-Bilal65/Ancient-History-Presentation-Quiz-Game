@@ -1,1 +1,1 @@
-This is a quiz game designed by sheikh bilal to make revising ancient history easy, engaging, and fast. It's an interactive way to reinforce knowledge and improve recall through active learning.
+Created by Sheikh Bilal, this quiz game is designed to make revising ancient history easy, engaging, and efficient. It offers an interactive approach to reinforce knowledge and boost recall through active learning
