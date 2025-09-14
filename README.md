@@ -1,1 +1,1 @@
-Created by Sheikh Bilal, this quiz game is designed to make revising ancient history easy, engaging, and efficient. It offers an interactive approach to reinforce knowledge and boost recall through active learning
+Created by Sheikh Bilal, this quiz game is designed to make revising ancient indian history easy, engaging, and efficient. It offers an interactive approach to reinforce knowledge and boost recall through active learning
