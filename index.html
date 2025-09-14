@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ancient Indian History - Interactive Presentation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="presentation-container">
+        <!-- Navigation Header -->
+        <header class="presentation-header">
+            <h1 class="presentation-title">Ancient Indian History</h1>
+            <div class="nav-controls">
+                <button class="btn btn--outline btn--sm" id="menuBtn">☰ Menu</button>
+                <div class="slide-counter">
+                    <span id="currentSlide">1</span> / <span id="totalSlides">50</span>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bar" id="progressBar"></div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Topic Navigation Menu -->
+        <nav class="topic-menu hidden" id="topicMenu">
+            <div class="menu-content">
+                <h3>Navigate to Topic</h3>
+                <ul class="topic-list">
+                    <li><button class="topic-btn" data-topic="0">Prehistoric & Indus Valley</button></li>
+                    <li><button class="topic-btn" data-topic="1">Vedic Age</button></li>
+                    <li><button class="topic-btn" data-topic="2">Jainism</button></li>
+                    <li><button class="topic-btn" data-topic="3">Buddhism</button></li>
+                    <li><button class="topic-btn" data-topic="4">Mahajanapadas</button></li>
+                    <li><button class="topic-btn" data-topic="5">Mauryan Dynasty</button></li>
+                    <li><button class="topic-btn" data-topic="6">Gupta Dynasty</button></li>
+                    <li><button class="topic-btn" data-topic="7">Chola Dynasty</button></li>
+                </ul>
+                <button class="btn btn--secondary btn--sm" id="closeMenu">Close</button>
+            </div>
+        </nav>
+
+        <!-- Main Slide Area -->
+        <main class="slide-container">
+            <!-- Title Slide -->
+            <div class="slide active" data-slide="0">
+                <div class="slide-content title-slide">
+                    <h1 class="slide-title">Ancient Indian History</h1>
+                    <h2 class="slide-subtitle">Interactive Learning Presentation</h2>
+                    <div class="title-highlights">
+                        <div class="highlight-item animate-fade-in">
+                            <h3>📜 Comprehensive Coverage</h3>
+                            <p>From Stone Age to Medieval Period</p>
+                        </div>
+                        <div class="highlight-item animate-fade-in delay-1">
+                            <h3>🎯 Interactive Quizzes</h3>
+                            <p>Test your knowledge as you learn</p>
+                        </div>
+                        <div class="highlight-item animate-fade-in delay-2">
+                            <h3>🏛️ Key Civilizations</h3>
+                            <p>Indus Valley, Mauryan, Gupta & More</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Table of Contents -->
+            <div class="slide" data-slide="1">
+                <div class="slide-content">
+                    <h1 class="slide-title">Table of Contents</h1>
+                    <div class="toc-grid">
+                        <div class="toc-item animate-slide-up">
+                            <h3>1. Prehistoric & Indus Valley</h3>
+                            <p>Stone Age periods, Major Indus sites</p>
+                        </div>
+                        <div class="toc-item animate-slide-up delay-1">
+                            <h3>2. Vedic Age</h3>
+                            <p>Four Vedas, Varna system, Society</p>
+                        </div>
+                        <div class="toc-item animate-slide-up delay-2">
+                            <h3>3. Jainism</h3>
+                            <p>Tirthankaras, Principles, Philosophy</p>
+                        </div>
+                        <div class="toc-item animate-slide-up delay-3">
+                            <h3>4. Buddhism</h3>
+                            <p>Life of Buddha, Teachings, Spread</p>
+                        </div>
+                        <div class="toc-item animate-slide-up delay-4">
+                            <h3>5. Mahajanapadas</h3>
+                            <p>16 Kingdoms, Rise of Magadha</p>
+                        </div>
+                        <div class="toc-item animate-slide-up delay-5">
+                            <h3>6. Mauryan Dynasty</h3>
+                            <p>First Empire, Ashoka the Great</p>
+                        </div>
+                        <div class="toc-item animate-slide-up delay-6">
+                            <h3>7. Gupta Dynasty</h3>
+                            <p>Golden Age, Cultural achievements</p>
+                        </div>
+                        <div class="toc-item animate-slide-up delay-7">
+                            <h3>8. Chola Dynasty</h3>
+                            <p>Maritime power, Administration</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Slide Navigation -->
+        <div class="slide-navigation">
+            <button class="btn btn--secondary" id="prevBtn">← Previous</button>
+            <button class="btn btn--primary" id="nextBtn">Next →</button>
+        </div>
+
+        <!-- Quiz Modal -->
+        <div class="modal hidden" id="quizModal">
+            <div class="modal-content">
+                <h2 id="quizTitle">Quiz Time!</h2>
+                <div id="quizContent">
+                    <p id="quizQuestion"></p>
+                    <div class="quiz-options" id="quizOptions"></div>
+                    <div class="quiz-feedback hidden" id="quizFeedback">
+                        <p id="feedbackText"></p>
+                        <p id="explanationText"></p>
+                    </div>
+                </div>
+                <div class="quiz-actions">
+                    <button class="btn btn--primary hidden" id="submitAnswer">Submit Answer</button>
+                    <button class="btn btn--secondary hidden" id="nextQuestion">Next Question</button>
+                    <button class="btn btn--outline" id="closeQuiz">Continue Presentation</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fact Expansion Modal -->
+        <div class="modal hidden" id="factModal">
+            <div class="modal-content">
+                <h3 id="factTitle"></h3>
+                <p id="factContent"></p>
+                <button class="btn btn--secondary" id="closeFact">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
